@@ -1,0 +1,13 @@
+export const mock = {
+  name: "John Doe",
+  age: 30,
+  email: "john.doe@example.com",
+  phone: "1234567890",
+  address: "123 Main St, Anytown, USA",
+  city: "Anytown",
+  state: "CA",
+  zip: "12345",
+  country: "USA",
+  website: "https://www.example.com",
+  twitter: "https://twitter.com/example",
+};
