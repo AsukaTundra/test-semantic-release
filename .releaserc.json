@@ -35,7 +35,7 @@
     [
       "@semantic-release/github",
       {
-        "gitHubUrl": "https://github.com/AsukaTundra/test-semantic-release.git"
+        "githubUrl": "https://github.com"
       }
     ]
   ]
