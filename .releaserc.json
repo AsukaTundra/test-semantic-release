@@ -1,6 +1,9 @@
 {
   "tagFormat": "release-v${version}",
-  "branches": [{ "name": "release", "prerelease": "rc" }],
+  "branches": [
+    "main",
+    { "name": "release", "prerelease": "rc" }
+  ],
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -35,7 +38,8 @@
     [
       "@semantic-release/github",
       {
-        "githubUrl": "https://github.com"
+        "githubUrl": "https://github.com",
+        "failTitle": false
       }
     ]
   ]
