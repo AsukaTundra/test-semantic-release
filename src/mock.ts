@@ -11,3 +11,13 @@ export const mock = {
   website: "https://www.example.com",
   twitter: "https://twitter.com/example",
 };
+
+export const mockArray = [
+  {
+    name: "John Doe",
+    age: 30,
+    email: "john.doe@example.com",
+    phone: "1234567890",
+    address: "123 Main St, Anytown, USA",
+  },
+];
