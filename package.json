@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^7.1.0"
   }
 }
