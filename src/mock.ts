@@ -4,7 +4,7 @@ export const mock = {
   email: "john.doe@example.com",
   phone: "1234567890",
   address: "123 Main St, Anytown, USA",
-  city: "Anytown",
+  city: "Anyto12",
   state: "CA",
   zip: "12345",
   country: "USA",
