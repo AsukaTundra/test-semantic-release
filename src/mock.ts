@@ -5,7 +5,7 @@ export const mock = {
   phone: "1234567890",
   address: "123 Main St, Anytown",
   city: "Anyto12",
-  state: "Cddd",
+  state: "Cd",
   zip: "345",
   country: "USA",
   website: "https://www.example.com",
