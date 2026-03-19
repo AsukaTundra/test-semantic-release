@@ -1,5 +1,5 @@
 export const mock = {
-  name: "John Doe",
+  name: "John",
   age: 30,
   email: "john.doe@example.com",
   phone: "1234567890",
