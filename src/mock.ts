@@ -3,7 +3,7 @@ export const mock = {
   age: 30,
   email: "john.doe@example.com",
   phone: "1234567890",
-  address: "123 Main St, Anytown, USA",
+  address: "123 Main St, Anytown",
   city: "Anyto12",
   state: "C",
   zip: "345",
