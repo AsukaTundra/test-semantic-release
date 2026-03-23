@@ -21,17 +21,19 @@
         ]
       }
     ],
+    "@semantic-release/release-notes-generator",
+    [
+      "semantic-release-mirror-version",
+      {
+        "fileGlob": ["./.env.example"],
+        "placeholderRegExp": "(?<=APP_VERSION=)[^\\r\\n]+"
+      }
+    ],
     [
       "@semantic-release/npm",
       {
         "npmPublish": false,
         "tarballDir": "dist"
-      }
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "node scripts/update-env-version.js ${nextRelease.version}"
       }
     ],
     [
