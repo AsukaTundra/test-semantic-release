@@ -21,7 +21,6 @@
         ]
       }
     ],
-    "@semantic-release/release-notes-generator",
     [
       "semantic-release-mirror-version",
       {
@@ -29,6 +28,7 @@
         "placeholderRegExp": "(?<=APP_VERSION=)[^\\r\\n]+"
       }
     ],
+    ["./semantic-release-update-env-plugin.cjs", {}],
     [
       "@semantic-release/npm",
       {
