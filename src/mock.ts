@@ -7,7 +7,7 @@ export const mock = {
   city: "Anyto12",
   state: "Cd",
   zip: "345",
-  country: "USA",
+  country: "US222A",
   website: "https://www.example.com",
   twitter: "https://twitter.com/example",
 };
