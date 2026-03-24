@@ -25,6 +25,9 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
+      - name: Export current git hash
+        run: echo "GIT_HASH=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -33,6 +36,22 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Build Next.js artifact
+        run: npm run build
+
+      - name: Archive build artifact
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          ARTIFACT_PATH="dist/next-build-${GIT_HASH}.tar.gz"
+          FILES=(.next package.json package-lock.json next.config.ts)
+
+          if [ -d public ]; then
+            FILES+=(public)
+          fi
+
+          tar -czf "$ARTIFACT_PATH" "${FILES[@]}"
 
       - name: Install semantic-release (npx)
         run: |

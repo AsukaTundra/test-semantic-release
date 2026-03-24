@@ -28,7 +28,6 @@
         "placeholderRegExp": "(?<=APP_VERSION=)[^\\r\\n]+"
       }
     ],
-    ["./semantic-release-update-env-plugin.cjs", {}],
     [
       "@semantic-release/npm",
       {
@@ -47,7 +46,13 @@
       "@semantic-release/github",
       {
         "githubUrl": "https://github.com",
-        "failTitle": false
+        "failTitle": false,
+        "assets": [
+          {
+            "path": "dist/next-build-*.tar.gz",
+            "label": "Next.js build artifact"
+          }
+        ]
       }
     ]
   ]
