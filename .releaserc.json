@@ -1,8 +1,8 @@
 {
   "tagFormat": "release-v${version}",
   "branches": [
-    { "name": "pre-release", "prerelease": "rc" },
-    { "name": "release", "channel": "latest" }
+    { "name": "release", "prerelease": "rc" },
+    { "name": "master", "channel": "latest" }
   ],
   "plugins": [
     [
@@ -10,10 +10,10 @@
       {
         "preset": "conventionalcommits",
         "releaseRules": [
-          { "branch": "release", "type": "feat", "release": "minor" },
-          { "branch": "release", "type": "fix", "release": "patch" },
+          { "branch": "master", "type": "feat", "release": "minor" },
+          { "branch": "master", "type": "fix", "release": "patch" },
           {
-            "branch": "release",
+            "branch": "master",
             "type": "BREAKING CHANGE",
             "release": "major"
           },
