@@ -3,8 +3,8 @@ name: semantic-release
 on:
   push:
     branches:
+      - master
       - release
-      - pre-release
 
 permissions:
   contents: write
@@ -23,7 +23,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          fetch-tags: true
           persist-credentials: true
+
+      - name: Ensure all refs and tags are fetched
+        run: |
+          git remote -v
+          git fetch --force --prune --tags origin "+refs/heads/*:refs/remotes/origin/*"
+          git fetch --force origin "refs/notes/*:refs/notes/*"
+          git rev-parse --verify HEAD
 
       - name: Export current git hash
         run: echo "GIT_HASH=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
