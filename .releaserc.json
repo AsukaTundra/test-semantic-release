@@ -1,7 +1,7 @@
 {
   "tagFormat": "release-v${version}",
   "branches": [
-    { "name": "release", "prerelease": "rc" },
+    { "name": "release", "channel": "pre-release", "prerelease": "rc" },
     { "name": "master", "channel": "latest" }
   ],
   "plugins": [

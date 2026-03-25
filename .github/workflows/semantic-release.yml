@@ -30,6 +30,7 @@ jobs:
         run: |
           git remote -v
           git fetch --force --prune --tags origin "+refs/heads/*:refs/remotes/origin/*"
+          git fetch --force origin "refs/notes/*:refs/notes/*"
           git rev-parse --verify HEAD
 
       - name: Export current git hash
