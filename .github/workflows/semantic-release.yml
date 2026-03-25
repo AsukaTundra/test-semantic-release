@@ -3,8 +3,8 @@ name: semantic-release
 on:
   push:
     branches:
+      - master
       - release
-      - pre-release
 
 permissions:
   contents: write
